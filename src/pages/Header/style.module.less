@@ -1,0 +1,64 @@
+@import '../../components/less/basic_var.module.less';
+// @import '../../../public/basic_var.module.less';
+.flexV {
+  display: flex;
+  flex-direction: column;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  .flex();
+  justify-content: flex-start;
+  padding-left: @pd-left;
+  background-color: @head-color;
+  background-image: linear-gradient(to bottom, @grad-beg, @grad-end);
+  opacity: 0.99;
+  border-bottom: 1px solid @bd-color;
+  font-weight: @font-w;
+
+  .topTitle {
+    font-size: @font;
+    color: @bg-color;
+    align-self: center;
+    padding-left: @s-gap;
+    transform: translateY(-2px);
+    font-weight: 500;
+  }
+  .logo {
+    align-self: center;
+  }
+
+  .title {
+    .flex();
+    padding-left: @s-gap;
+    justify-content: space-between;
+    align-items: center;
+    > a {
+      width: 50px;
+      padding: @pd-gap;
+      line-height: 30px;
+      text-decoration: none;
+      color: @label;
+    }
+    .active {
+      background-color: @active;
+      box-shadow: 0 1px 5px rgb(0 0 0 /13%) inset;
+      color: @bg-color;
+    }
+  }
+  .theme {
+    align-items: center;
+    padding-left: 40%;
+    display: flex;
+
+    &:hover {
+      cursor: pointer;
+    }
+    .themeBody {
+      padding: 0 5px 0;
+    }
+  }
+}

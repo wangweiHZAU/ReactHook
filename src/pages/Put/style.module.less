@@ -1,0 +1,76 @@
+@import '../../components/less/basic_var.module.less';
+// @import '../../../public/basic_var.module.less';
+.flexV {
+  display: flex;
+  flex-direction: column;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  .flexV();
+}
+
+.main .title,
+.keys .title {
+  font-size: @font;
+  color: @bg-color;
+  padding: 1% 0 1% 0;
+}
+.main {
+  padding: 0 0 0 @pd-left;
+
+  .label {
+    width: @full;
+    font-size: @s-font;
+    color: @label;
+    padding-top: @text-gap;
+  }
+}
+.tips {
+  font-size: @s-font;
+  color: @tip-color;
+  background-color: @tip-bg;
+  vertical-align: middle;
+}
+.subBtn {
+  width: 64px;
+  margin-top: 2%;
+  display: block;
+  border: none;
+  padding: 0.7%;
+  background-color: @btn-color;
+  color: @hide-color;
+}
+input,
+textarea {
+  padding: 8px;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid silver;
+  color: @label;
+}
+input:hover,
+textarea:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  box-shadow: inset 0 1px 2px rgb(0 0 0 /13%);
+}
+.btn {
+  background: @btn-color;
+  color: @hide-color;
+}
+.keys {
+  padding: @pd-gap 0 0 @pd-left;
+}
+::placeholder {
+  color: @btn-color;
+}
+.hide {
+  display: @hide;
+}
+.warning {
+  display: block;
+  color: @btn-color;
+}

@@ -1,0 +1,53 @@
+@import '../../components/less/basic_var.module.less';
+// @import '../../../public/basic_var.module.less';
+.flexV {
+  display: flex;
+  flex-direction: column;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  width: @full;
+  height: @full;
+  .flexV();
+  align-items: center;
+  padding-top: 10%;
+}
+.mainLogo,
+.logoText {
+  .flexV();
+  align-self: center;
+}
+.logoText {
+  font-size: @m-font;
+  line-height: @line-height;
+  padding: @pd-left 0 @pd-gap;
+}
+.btn {
+  .flex();
+  width: @full;
+}
+.put:hover .putBtn,
+.open:hover .openBtn {
+  color: @btn-color;
+}
+.putBtn,
+.openBtn {
+  border: none;
+  background-color: @hide-color;
+}
+.big {
+  font-size: @b-font;
+  margin: 0;
+}
+.put,
+.open {
+  padding: @s-gap;
+}
+.normal {
+  font-size: @n-font;
+  margin: 0;
+}
